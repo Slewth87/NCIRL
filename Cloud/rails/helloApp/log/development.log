@@ -1,0 +1,245 @@
+  [1m[35m (2.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2022-02-20 18:04:20.994388"], ["updated_at", "2022-02-20 18:04:20.994388"]]
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for 127.0.0.1 at 2022-02-20 18:05:17 +0000
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/rduffy/.rbenv/versions/3.0.3/lib/ruby/gems/3.0.0/gems/railties-7.0.2.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/rduffy/.rbenv/versions/3.0.3/lib/ruby/gems/3.0.0/gems/railties-7.0.2.2/lib/rails/templates/rails/welcome/index.html.erb (Duration: 3.0ms | Allocations: 840)
+Completed 200 OK in 34ms (Views: 11.2ms | ActiveRecord: 0.0ms | Allocations: 7723)
+
+
+Started GET "/" for 127.0.0.1 at 2022-02-20 18:16:00 +0000
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/rduffy/.rbenv/versions/3.0.3/lib/ruby/gems/3.0.0/gems/railties-7.0.2.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/rduffy/.rbenv/versions/3.0.3/lib/ruby/gems/3.0.0/gems/railties-7.0.2.2/lib/rails/templates/rails/welcome/index.html.erb (Duration: 1.2ms | Allocations: 732)
+Completed 200 OK in 10ms (Views: 3.6ms | ActiveRecord: 0.0ms | Allocations: 6432)
+
+
+Started GET "/hello" for 127.0.0.1 at 2022-02-20 18:17:21 +0000
+Processing by HelloController#hello as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering hello/hello.html.erb within layouts/application
+  Rendered hello/hello.html.erb within layouts/application (Duration: 0.4ms | Allocations: 148)
+  Rendered layout layouts/application.html.erb (Duration: 602.7ms | Allocations: 96357)
+Completed 200 OK in 605ms (Views: 604.3ms | ActiveRecord: 0.0ms | Allocations: 97677)
+
+
+Started GET "/hello" for 127.0.0.1 at 2022-02-20 18:19:34 +0000
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HelloController#hello as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering hello/hello.html.erb within layouts/application
+  Rendered hello/hello.html.erb within layouts/application (Duration: 5.1ms | Allocations: 1281)
+  Rendered layout layouts/application.html.erb (Duration: 99.8ms | Allocations: 36419)
+Completed 200 OK in 109ms (Views: 102.9ms | ActiveRecord: 0.0ms | Allocations: 42287)
+
+
+Started POST "/say_hello" for 127.0.0.1 at 2022-02-20 18:19:47 +0000
+  
+ActionController::RoutingError (No route matches [POST] "/say_hello"):
+  
+Started POST "/say_hello" for 127.0.0.1 at 2022-02-20 18:19:56 +0000
+  
+ActionController::RoutingError (No route matches [POST] "/say_hello"):
+  
+Started GET "/hello" for 127.0.0.1 at 2022-02-20 18:20:02 +0000
+Processing by HelloController#hello as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering hello/hello.html.erb within layouts/application
+  Rendered hello/hello.html.erb within layouts/application (Duration: 0.6ms | Allocations: 379)
+  Rendered layout layouts/application.html.erb (Duration: 4.4ms | Allocations: 2590)
+Completed 200 OK in 6ms (Views: 5.0ms | ActiveRecord: 0.0ms | Allocations: 2959)
+
+
+Started GET "/hello" for 127.0.0.1 at 2022-02-20 18:20:36 +0000
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HelloController#hello as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering hello/hello.html.erb within layouts/application
+  Rendered hello/hello.html.erb within layouts/application (Duration: 4.9ms | Allocations: 1304)
+  Rendered layout layouts/application.html.erb (Duration: 80.1ms | Allocations: 36697)
+Completed 200 OK in 90ms (Views: 82.9ms | ActiveRecord: 0.0ms | Allocations: 42565)
+
+
+Started GET "/hello" for 127.0.0.1 at 2022-02-20 18:24:46 +0000
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HelloController#hello as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering hello/hello.html.erb within layouts/application
+  Rendered hello/hello.html.erb within layouts/application (Duration: 4.4ms | Allocations: 1277)
+  Rendered layout layouts/application.html.erb (Duration: 86.3ms | Allocations: 35958)
+Completed 200 OK in 98ms (Views: 90.2ms | ActiveRecord: 0.0ms | Allocations: 41826)
+
+
+Started POST "/say_hello" for 127.0.0.1 at 2022-02-20 18:24:51 +0000
+  
+ActionController::RoutingError (No route matches [POST] "/say_hello"):
+  
+Started GET "/hello" for 127.0.0.1 at 2022-02-20 18:25:18 +0000
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HelloController#hello as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering hello/hello.html.erb within layouts/application
+  Rendered hello/hello.html.erb within layouts/application (Duration: 4.6ms | Allocations: 1295)
+  Rendered layout layouts/application.html.erb (Duration: 71.8ms | Allocations: 36536)
+Completed 200 OK in 82ms (Views: 75.1ms | ActiveRecord: 0.0ms | Allocations: 42404)
+
+
+Started POST "/say_hello" for 127.0.0.1 at 2022-02-20 18:25:20 +0000
+Processing by HelloController#say_hello as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "name"=>"asdasd", "commit"=>"Submit"}
+  Rendering layout layouts/application.html.erb
+  Rendering hello/say_hello.html.erb within layouts/application
+  Rendered hello/say_hello.html.erb within layouts/application (Duration: 0.5ms | Allocations: 172)
+  Rendered layout layouts/application.html.erb (Duration: 3.5ms | Allocations: 2393)
+Completed 200 OK in 6ms (Views: 4.1ms | ActiveRecord: 0.0ms | Allocations: 3195)
+
+
+Started GET "/hello" for 127.0.0.1 at 2022-02-20 18:27:58 +0000
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HelloController#hello as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering hello/hello.html.erb within layouts/application
+  Rendered hello/hello.html.erb within layouts/application (Duration: 4.3ms | Allocations: 1292)
+  Rendered layout layouts/application.html.erb (Duration: 80.2ms | Allocations: 36155)
+Completed 200 OK in 90ms (Views: 84.0ms | ActiveRecord: 0.0ms | Allocations: 42023)
+
+
+Started POST "/say_hello" for 127.0.0.1 at 2022-02-20 18:28:01 +0000
+Processing by HelloController#say_hello as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "name"=>"asd", "commit"=>"Submit"}
+  Rendering layout layouts/application.html.erb
+  Rendering hello/say_hello.html.erb within layouts/application
+  Rendered hello/say_hello.html.erb within layouts/application (Duration: 1.6ms | Allocations: 2005)
+  Rendered layout layouts/application.html.erb (Duration: 1.8ms | Allocations: 2099)
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms | Allocations: 2903)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <h1> <%= @result %> </h1>
+<%= form_with url: "/say_hello", local: true, data: {turbo:false} do |f| %>
+    <%= text_field_tag :name %%>
+    <%= submit_tag "Submit" %%>
+<% end %>
+<hr>
+):
+1:    <h1> <%= @result %> </h1>
+2:    <%= form_with url: "/say_hello", local: true, data: {turbo:false} do |f| %>
+3:        <%= text_field_tag :name %%>
+4:        <%= submit_tag "Submit" %%>
+5:    <% end %>
+6:    <hr>
+  
+app/views/hello/say_hello.html.erb:3: syntax error, unexpected ')'
+app/views/hello/say_hello.html.erb:4: syntax error, unexpected ')'
+app/views/hello/say_hello.html.erb:5: syntax error, unexpected `end', expecting ')'
+app/views/hello/say_hello.html.erb:8: syntax error, unexpected `end', expecting ')'
+app/views/hello/say_hello.html.erb:3: syntax error, unexpected ')'
+app/views/hello/say_hello.html.erb:4: syntax error, unexpected ')'
+app/views/hello/say_hello.html.erb:5: syntax error, unexpected `end', expecting ')'
+app/views/hello/say_hello.html.erb:8: syntax error, unexpected `end', expecting ')'
+app/views/hello/say_hello.html.erb:3: syntax error, unexpected ')'
+app/views/hello/say_hello.html.erb:4: syntax error, unexpected ')'
+app/views/hello/say_hello.html.erb:5: syntax error, unexpected `end', expecting ')'
+app/views/hello/say_hello.html.erb:8: syntax error, unexpected `end', expecting ')'
+app/views/hello/say_hello.html.erb:3: syntax error, unexpected ')'
+app/views/hello/say_hello.html.erb:4: syntax error, unexpected ')'
+app/views/hello/say_hello.html.erb:5: syntax error, unexpected `end', expecting ')'
+app/views/hello/say_hello.html.erb:8: syntax error, unexpected `end', expecting ')'
+app/views/hello/say_hello.html.erb:3: syntax error, unexpected ')'
+app/views/hello/say_hello.html.erb:4: syntax error, unexpected ')'
+app/views/hello/say_hello.html.erb:5: syntax error, unexpected `end', expecting ')'
+app/views/hello/say_hello.html.erb:8: syntax error, unexpected `end', expecting ')'
+app/views/hello/say_hello.html.erb:3: syntax error, unexpected ')'
+app/views/hello/say_hello.html.erb:4: syntax error, unexpected ')'
+app/views/hello/say_hello.html.erb:5: syntax error, unexpected `end', expecting ')'
+app/views/hello/say_hello.html.erb:8: syntax error, unexpected `end', expecting ')'
+Started POST "/say_hello" for 127.0.0.1 at 2022-02-20 18:28:51 +0000
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HelloController#say_hello as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "name"=>"asd", "commit"=>"Submit"}
+  Rendering layout layouts/application.html.erb
+  Rendering hello/say_hello.html.erb within layouts/application
+  Rendered hello/say_hello.html.erb within layouts/application (Duration: 1.2ms | Allocations: 936)
+  Rendered layout layouts/application.html.erb (Duration: 63.2ms | Allocations: 35811)
+Completed 200 OK in 75ms (Views: 66.0ms | ActiveRecord: 0.0ms | Allocations: 42199)
+
+
+Started POST "/say_hello" for 127.0.0.1 at 2022-02-20 18:28:54 +0000
+Processing by HelloController#say_hello as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "name"=>"asdwe", "commit"=>"Submit"}
+  Rendering layout layouts/application.html.erb
+  Rendering hello/say_hello.html.erb within layouts/application
+  Rendered hello/say_hello.html.erb within layouts/application (Duration: 0.9ms | Allocations: 500)
+  Rendered layout layouts/application.html.erb (Duration: 4.7ms | Allocations: 2992)
+Completed 200 OK in 8ms (Views: 6.4ms | ActiveRecord: 0.0ms | Allocations: 4488)
+
+
+Started POST "/say_hello" for 127.0.0.1 at 2022-02-20 18:28:59 +0000
+Processing by HelloController#say_hello as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "name"=>"cvndgn", "commit"=>"Submit"}
+  Rendering layout layouts/application.html.erb
+  Rendering hello/say_hello.html.erb within layouts/application
+  Rendered hello/say_hello.html.erb within layouts/application (Duration: 0.3ms | Allocations: 183)
+  Rendered layout layouts/application.html.erb (Duration: 3.2ms | Allocations: 2272)
+Completed 200 OK in 5ms (Views: 3.7ms | ActiveRecord: 0.0ms | Allocations: 2890)
+
+
+Started GET "/" for 127.0.0.1 at 2022-02-20 18:31:02 +0000
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HelloController#hello as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering hello/hello.html.erb within layouts/application
+  Rendered hello/hello.html.erb within layouts/application (Duration: 4.2ms | Allocations: 1292)
+  Rendered layout layouts/application.html.erb (Duration: 78.8ms | Allocations: 36395)
+Completed 200 OK in 88ms (Views: 81.7ms | ActiveRecord: 0.0ms | Allocations: 42263)
+
+
+Started POST "/say_hello" for 127.0.0.1 at 2022-02-20 18:31:06 +0000
+Processing by HelloController#say_hello as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "name"=>"dasfwe", "commit"=>"Submit"}
+  Rendering layout layouts/application.html.erb
+  Rendering hello/say_hello.html.erb within layouts/application
+  Rendered hello/say_hello.html.erb within layouts/application (Duration: 1.0ms | Allocations: 465)
+  Rendered layout layouts/application.html.erb (Duration: 4.0ms | Allocations: 2658)
+Completed 200 OK in 6ms (Views: 4.5ms | ActiveRecord: 0.0ms | Allocations: 3472)
+
+
+Started POST "/say_hello" for 127.0.0.1 at 2022-02-20 18:31:09 +0000
+Processing by HelloController#say_hello as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "name"=>"zfef", "commit"=>"Submit"}
+  Rendering layout layouts/application.html.erb
+  Rendering hello/say_hello.html.erb within layouts/application
+  Rendered hello/say_hello.html.erb within layouts/application (Duration: 0.3ms | Allocations: 183)
+  Rendered layout layouts/application.html.erb (Duration: 3.4ms | Allocations: 2271)
+Completed 200 OK in 5ms (Views: 4.0ms | ActiveRecord: 0.0ms | Allocations: 2802)
+
+
+Started GET "/" for 127.0.0.1 at 2022-02-27 16:32:45 +0000
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HelloController#hello as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering hello/hello.html.erb within layouts/application
+  Rendered hello/hello.html.erb within layouts/application (Duration: 5.5ms | Allocations: 1169)
+  Rendered layout layouts/application.html.erb (Duration: 101.4ms | Allocations: 36357)
+Completed 200 OK in 119ms (Views: 106.5ms | ActiveRecord: 0.0ms | Allocations: 42225)
+
+

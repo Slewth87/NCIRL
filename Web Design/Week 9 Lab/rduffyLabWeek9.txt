@@ -1,0 +1,4 @@
+You can ignore the Game code (Rock Paper Scissors). I was going to tackle that, but I realised that the best way to meet the requirements of the lab for it (based on the way I'd already built the game) didn't actually involve using any Loops.
+So the Song and Grades elements are what include relevant loops for grading.
+
+https://github.com/rduffyncirl/week9lab

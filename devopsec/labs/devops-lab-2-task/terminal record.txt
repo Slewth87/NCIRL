@@ -1,0 +1,294 @@
+The default interactive shell is now zsh.
+To update your account to use zsh, please run `chsh -s /bin/zsh`.
+For more details, please visit https://support.apple.com/kb/HT208050.
+DUB-M-RDUFFY01:Advanced Client Side Development rduffy$ cd ../devopsec/lab/devops-lab-2-task
+bash: cd: ../devopsec/lab/devops-lab-2-task: No such file or directory
+DUB-M-RDUFFY01:Advanced Client Side Development rduffy$ cd ../
+DUB-M-RDUFFY01:NCIRL rduffy$ ls
+Advanced Client Side Development        Development                             Web Design                              node_modules
+Databases                               OOSE                                    devopsec                                rduffyncirl.github.io
+DUB-M-RDUFFY01:NCIRL rduffy$ cd devopsec/labs/devops-lab-2-task
+DUB-M-RDUFFY01:devops-lab-2-task rduffy$ touch script.sh
+DUB-M-RDUFFY01:devops-lab-2-task rduffy$ sh script.sh
+DUB-M-RDUFFY01:devops-lab-2-task rduffy$ git init
+hint: Using 'master' as the name for the initial branch. This default branch name
+hint: is subject to change. To configure the initial branch name to use in all
+hint: of your new repositories, which will suppress this warning, call:
+hint: 
+hint:   git config --global init.defaultBranch <name>
+hint: 
+hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+hint: 'development'. The just-created branch can be renamed via this command:
+hint: 
+hint:   git branch -m <name>
+Initialized empty Git repository in /Users/rduffy/Code/NCIRL/devopsec/labs/devops-lab-2-task/.git/
+DUB-M-RDUFFY01:devops-lab-2-task rduffy$ git remote add origin https://github.com/rduffyncirl/devops-lab-2-task.git
+git branch -M main
+git push -u origin mainDUB-M-RDUFFY01:devops-lab-2-task rduffy$ git branch -M main
+DUB-M-RDUFFY01:devops-lab-2-task rduffy$ git push -u origin main
+error: src refspec main does not match any
+error: failed to push some refs to 'https://github.com/rduffyncirl/devops-lab-2-task.git'
+DUB-M-RDUFFY01:devops-lab-2-task rduffy$ git push -u origin master
+error: src refspec master does not match any
+error: failed to push some refs to 'https://github.com/rduffyncirl/devops-lab-2-task.git'
+DUB-M-RDUFFY01:devops-lab-2-task rduffy$ git status
+On branch main
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        script.sh
+
+nothing added to commit but untracked files present (use "git add" to track)
+DUB-M-RDUFFY01:devops-lab-2-task rduffy$ git add .
+DUB-M-RDUFFY01:devops-lab-2-task rduffy$ git commit -m "first push"
+[main (root-commit) 96ee1ce] first push
+ 1 file changed, 15 insertions(+)
+ create mode 100755 script.sh
+DUB-M-RDUFFY01:devops-lab-2-task rduffy$ git push origin main
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 314 bytes | 314.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/rduffyncirl/devops-lab-2-task.git
+ * [new branch]      main -> main
+DUB-M-RDUFFY01:devops-lab-2-task rduffy$ git add .
+DUB-M-RDUFFY01:devops-lab-2-task rduffy$ git commit -m "Added folder deletion lines"
+[main ae21e73] Added folder deletion lines
+ 1 file changed, 2 insertions(+)
+DUB-M-RDUFFY01:devops-lab-2-task rduffy$ git push origin main
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 313 bytes | 313.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/rduffyncirl/devops-lab-2-task.git
+   96ee1ce..ae21e73  main -> main
+DUB-M-RDUFFY01:devops-lab-2-task rduffy$ ls -l
+total 8
+-rwxr-xr-x  1 rduffy  staff  237 31 Jan 21:44 script.sh
+DUB-M-RDUFFY01:devops-lab-2-task rduffy$ cd fol_1
+bash: cd: fol_1: No such file or directory
+DUB-M-RDUFFY01:devops-lab-2-task rduffy$ ls -l
+total 8
+-rwxr-xr-x  1 rduffy  staff  237 31 Jan 21:44 script.sh
+DUB-M-RDUFFY01:devops-lab-2-task rduffy$ sh script.sh
+rm: fol_1: No such file or directory
+rm: fol_2: No such file or directory
+DUB-M-RDUFFY01:devops-lab-2-task rduffy$ cd fol_1
+DUB-M-RDUFFY01:fol_1 rduffy$ ls -l
+total 0
+-rw-r--r--  1 rduffy  staff  0 31 Jan 21:48 1_1.txt
+-rw-r--r--  1 rduffy  staff  0 31 Jan 21:48 1_2.txt
+-rw-r--r--  1 rduffy  staff  0 31 Jan 21:48 1_3.txt
+DUB-M-RDUFFY01:fol_1 rduffy$ cd ../
+DUB-M-RDUFFY01:devops-lab-2-task rduffy$ sh script.sh
+DUB-M-RDUFFY01:devops-lab-2-task rduffy$ cd fol_1
+DUB-M-RDUFFY01:fol_1 rduffy$ ls -l
+total 0
+-rw-------  1 rduffy  staff  0 31 Jan 22:03 1_1.txt
+-rwxrwxrwx  1 rduffy  staff  0 31 Jan 22:03 1_2.txt
+-rw-------  1 rduffy  staff  0 31 Jan 22:03 1_3.txt
+DUB-M-RDUFFY01:fol_1 rduffy$ git status
+On branch main
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   ../script.sh
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        ../.gitignore
+        ../README.md
+
+no changes added to commit (use "git add" and/or "git commit -a")
+DUB-M-RDUFFY01:fol_1 rduffy$ git add ../README.md
+DUB-M-RDUFFY01:fol_1 rduffy$ git commit -m "Step16, adding readme"
+[main 420f977] Step16, adding readme
+ 1 file changed, 5 insertions(+)
+ create mode 100644 README.md
+DUB-M-RDUFFY01:fol_1 rduffy$ git push origin main
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 419 bytes | 419.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/rduffyncirl/devops-lab-2-task.git
+   ae21e73..420f977  main -> main
+DUB-M-RDUFFY01:fol_1 rduffy$ cd ../
+
+
++++the below is me trying to resolve a problem where the line to echo the instruction for how to run the script.sh into the readme, was causing the script to rerun itself.
+I resolved this by adding \ to escape the ` characters for the markdown++++
+
+
+DUB-M-RDUFFY01:devops-lab-2-task rduffy$ bash script.sh
+^C
+DUB-M-RDUFFY01:devops-lab-2-task rduffy$ sh script.sh
+^C
+DUB-M-RDUFFY01:devops-lab-2-task rduffy$ sh script.sh
+touch: 1_1.txt: No such file or directory
+touch: 1_2.txt: No such file or directory
+touch: 1_3.txt: No such file or directory
+script.sh: line 10: cd: ../fol_2: No such file or directory
+touch: 2_1.txt: No such file or directory
+touch: 2_2.txt: No such file or directory
+touch: 2_3.txt: No such file or directory
+script.sh: line 6: cd: fol_1: No such file or directory
+script.sh: line 10: cd: ../fol_2: No such file or directory
+chmod: fol_1/1_1.txt: No such file or directory
+chmod: fol_1/1_3.txt: No such file or directory
+chmod: fol_2/2_1.txt: No such file or directory
+chmod: fol_2/2_3.txt: No such file or directory
+chmod: fol_1/1_2.txt: No such file or directory
+chmod: fol_1/1_2.txt: No such file or directory
+bash: script.sh: No such file or directory
+^C
+DUB-M-RDUFFY01:devops-lab-2-task rduffy$ sh script.sh
+^C
+DUB-M-RDUFFY01:devops-lab-2-task rduffy$ bash script.st
+bash: script.st: No such file or directory
+DUB-M-RDUFFY01:devops-lab-2-task rduffy$ bash script.sh
+bash: script.she: No such file or directory
+Job Completed
+DUB-M-RDUFFY01:devops-lab-2-task rduffy$ bash script.sh
+Job Completed
+DUB-M-RDUFFY01:devops-lab-2-task rduffy$ bash script.sh
+Job Completed
+
+
+++++Problem solved++++
+
+
+DUB-M-RDUFFY01:devops-lab-2-task rduffy$ git status
+On branch main
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   README.md
+        modified:   script.sh
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        .gitignore
+
+no changes added to commit (use "git add" and/or "git commit -a")
+DUB-M-RDUFFY01:devops-lab-2-task rduffy$ git status
+On branch main
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   README.md
+        modified:   script.sh
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        .gitignore
+
+no changes added to commit (use "git add" and/or "git commit -a")
+DUB-M-RDUFFY01:devops-lab-2-task rduffy$ git status
+On branch main
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   README.md
+        modified:   script.sh
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        .gitignore
+
+no changes added to commit (use "git add" and/or "git commit -a")
+DUB-M-RDUFFY01:devops-lab-2-task rduffy$ git commit -m "Step 18 update. Also some minor corrections"
+On branch main
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   README.md
+        modified:   script.sh
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        .gitignore
+
+no changes added to commit (use "git add" and/or "git commit -a")
+DUB-M-RDUFFY01:devops-lab-2-task rduffy$ git push origin main
+Everything up-to-date
+DUB-M-RDUFFY01:devops-lab-2-task rduffy$ git status
+On branch main
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   README.md
+        modified:   script.sh
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        .gitignore
+
+no changes added to commit (use "git add" and/or "git commit -a")
+DUB-M-RDUFFY01:devops-lab-2-task rduffy$ git add README.md
+DUB-M-RDUFFY01:devops-lab-2-task rduffy$ git add script.sh
+DUB-M-RDUFFY01:devops-lab-2-task rduffy$ git status
+On branch main
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   README.md
+        modified:   script.sh
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        .gitignore
+
+DUB-M-RDUFFY01:devops-lab-2-task rduffy$ git commit -m "2nd attempt (forgot to git add on the 1st attempt) Step 18 update. Also some minor corrections"
+[main e8d71c1] 2nd attempt (forgot to git add on the 1st attempt) Step 18 update. Also some minor corrections
+ 2 files changed, 16 insertions(+), 2 deletions(-)
+DUB-M-RDUFFY01:devops-lab-2-task rduffy$ git push origin main
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (4/4), 726 bytes | 726.00 KiB/s, done.
+Total 4 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/rduffyncirl/devops-lab-2-task.git
+   420f977..e8d71c1  main -> main
+DUB-M-RDUFFY01:devops-lab-2-task rduffy$ git log
+commit e8d71c164a13bf0f0f197b42eb8543ee03cd89d8 (HEAD -> main, origin/main)
+Author: Richard Duffy <rduffy@slack-corp.com>
+Date:   Mon Jan 31 22:19:34 2022 +0000
+
+    2nd attempt (forgot to git add on the 1st attempt) Step 18 update. Also some minor corrections
+
+commit 420f9779c0f7b0f568c1d2a741e0966e81abee3d
+Author: Richard Duffy <rduffy@slack-corp.com>
+Date:   Mon Jan 31 22:05:21 2022 +0000
+
+    Step16, adding readme
+
+commit ae21e738ee20a83df28643b2aa8e5e92adc5761e
+DUB-M-RDUFFY01:devops-lab-2-task rduffy$ git reset --hard e8d71c164a13bf0f0f197b42eb8543ee03cd89d8
+HEAD is now at e8d71c1 2nd attempt (forgot to git add on the 1st attempt) Step 18 update. Also some minor corrections
+DUB-M-RDUFFY01:devops-lab-2-task rduffy$ git status
+On branch main
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        .gitignore
+
+nothing added to commit but untracked files present (use "git add" to track)
+DUB-M-RDUFFY01:devops-lab-2-task rduffy$ git commit -m "Step 19, final up (though rolling back to Step 18 was an odd direction, because nothing's changed since then to be rolled back)"
+On branch main
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        .gitignore
+
+nothing added to commit but untracked files present (use "git add" to track)
+DUB-M-RDUFFY01:devops-lab-2-task rduffy$ git push origin main
+Everything up-to-date
+DUB-M-RDUFFY01:devops-lab-2-task rduffy$ 

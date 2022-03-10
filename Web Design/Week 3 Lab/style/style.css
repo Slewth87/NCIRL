@@ -1,0 +1,45 @@
+body{
+    font-family:Arial;
+    color:#99f;
+    background-color:#060;
+    text-align:center;
+}
+.heading{
+    text-shadow: 2px 2px #000;
+}
+.good{
+    text-decoration: underline;
+}
+.bad{
+    font-weight: bold;
+}
+.descriptive{
+    list-style-type: square;
+}
+.caption{
+    text-decoration: underline;
+    margin-top: 2px;
+}
+
+@media(min-width:500px){
+    .main{
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-around;
+    }
+    .nav{
+        display:none;
+    }
+}
+.section{
+    flex-basis:30%;
+}
+.section-1{
+    order:1;
+}
+.section-2{
+    order:2;
+}
+.section-3{
+    order:3;
+}

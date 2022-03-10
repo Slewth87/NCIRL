@@ -1,0 +1,21 @@
+// const db = mysql.createConnection({
+ 
+//  host: '', // put your details in here
+//  user: '', // put your details in here
+//  password: '', // put your details in here
+//  database: '' // put your details in here
+ 
+// });
+
+
+// db.connect((err) =>{
+//  if(err){
+//   console.log("Connection Refused ... Please check login details");
+//    // throw(err)
+//  }
+//  else{
+//   console.log("Well done you are connected....");
+//  }
+// });
+
+

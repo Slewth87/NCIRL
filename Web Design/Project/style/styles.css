@@ -1,0 +1,290 @@
+body {
+	margin:0;
+}
+
+
+#welcome{
+	background-color:#d2f8be30;
+	padding-top:20px;
+}
+
+/* style the container */
+.container {
+	position: relative;
+	border-radius: 5px;
+	padding: 20px 0 30px 0;
+} 
+
+/* style inputs and link buttons */
+input,
+.btn {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 4px;
+  margin: 5px 0;
+  opacity: 0.85;
+  display: inline-block;
+  font-size: 17px;
+  line-height: 20px;
+  text-decoration: none; /* remove underline from anchors */
+}
+
+input:hover,
+.btn:hover {
+  opacity: 1;
+}
+
+
+/* style the submit button */
+input[type=submit] {
+  background-color: #04AA6D;
+  color: white;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+/* vertical line */
+.vl {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  border: 2px solid #ddd;
+  height: 175px;
+}
+
+/* text inside the vertical line */
+.vl-innertext {
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #f1f1f1;
+  border: 1px solid #ccc;
+  border-radius: 50%;
+  padding: 8px 10px;
+}
+
+/* hide some text on medium and large screens */
+.hide-md-lg {
+  display: none;
+}
+
+/* bottom container */
+.bottom-container {
+  text-align: center;
+  background-color: #666;
+  border-radius: 0px 0px 4px 4px;
+}
+
+/* Responsive layout - when the screen is less than 650px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 650px) {
+  .col {
+    width: 100%;
+    margin-top: 0;
+  }
+  /* hide the vertical line */
+  .vl {
+    display: none;
+  }
+  /* show the hidden text on small screens */
+  .hide-md-lg {
+    display: block;
+    text-align: center;
+  }
+}
+
+
+
+
+
+
+h2 {
+    position: relative;
+    margin-bottom: 35px;
+}
+
+p{
+	width: 70%;
+	margin: 0 auto;
+	color: #848484;
+}
+
+
+  .contaner {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 25px;
+  }
+  
+  .content {
+    position: relative;
+    padding: 20px;
+    color: #fff;
+  }
+  
+  .content h2 {
+    position: absolute;
+    top: -60px;
+    right: 20px;
+    margin: 0;
+    padding: 0;
+    font-size: 160px;
+    line-height: 1.2;
+    color: rgba(255, 255, 255, 0.06);
+    transition: 0.5s;
+  }
+  
+  .content h3 {
+    margin: 0 0 10px;
+    font-size: 24px;
+    letter-spacing: 2px;
+    font-weight: 700;
+  }
+  
+  .content p {
+    margin: 0;
+    font-size: 14px;
+    letter-spacing: 2px;
+    line-height: 1.2;
+  }
+  
+  .content button {
+    cursor: pointer;
+    position: relative;
+    margin: 20px 0 0;
+    padding: 10px 20px;
+    background-color: transparent;
+    border: 1px solid #fff;
+    color: #fff;
+    transition: 0.5s;
+    transform: translateY(-40px);
+    opacity: 0;
+    visibility: hidden;
+    font-size: 12px;
+    z-index: 1;
+  }
+  
+  .content button:hover {
+    color: #000;
+    background-color: #fff;
+  }
+  
+  .box {
+    width: 260px;
+    min-height: 380px;
+    cursor: pointer;
+    position: relative;
+    background-color: #46ca9d;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+  }
+  
+  .box:hover .content h2 {
+    top: -140px;
+  }
+  
+  .box:hover .content button {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  .box:before {
+    content: "";
+    position: absolute;
+    top: -3px;
+    left: -3px;
+    right: -3px;
+    bottom: -3px;
+    background-color: #fff;
+    transform: skew(2deg, 2deg);
+    z-index: -1;
+  }
+  
+  .box:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background-color: rgb(1 45 8 / 27%);
+  }
+  
+  .box:nth-child(1):before {
+    background: linear-gradient(#ff0000, #0037ff);
+  }
+  
+  .box:nth-child(2):before {
+    background: linear-gradient(#d8ff00, #17f4ff);
+  }
+  
+  .box:nth-child(3):before {
+    background: linear-gradient(#af36ff, #ff0070);
+  }
+
+  .box:nth-child(4):before {
+    background: linear-gradient(#ff0000, #0037ff);
+  }
+  
+  .box:nth-child(5):before {
+    background: linear-gradient(#d8ff00, #17f4ff);
+  }
+  
+ 
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left:0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  background-size: 100% 100%;
+}
+
+/* Modal Content */
+.modal-content {
+  color: black;
+  font-family: 'Calligraffitti', cursive;
+  font-size: 80%;
+  margin: auto;
+  padding: 14px;
+  border: 1px solid rgb(0 0 0 / 0%);
+  width: 80%;
+}
+
+
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
+  
+  
+
+
+

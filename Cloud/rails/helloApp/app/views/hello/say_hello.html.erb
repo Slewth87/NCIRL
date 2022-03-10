@@ -1,0 +1,6 @@
+<h1> <%= @result %> </h1>
+<%= form_with url: "/say_hello", local: true, data: {turbo:false} do |f| %>
+    <%= text_field_tag :name %>
+    <%= submit_tag "Submit" %>
+<% end %>
+<hr>

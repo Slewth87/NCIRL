@@ -1,0 +1,19 @@
+<%= link_to "Another page", "/another_page" %>
+
+<div class="light_switch">
+    <%= form_with url: "/light_switch", local: true, data: {turbo: false} do |f| %>
+        <%= hidden_field_tag 'status', false %>
+        <%= submit_tag "Turn off", disabled: !@light_switch, class: "btn btn-font" %>
+    <% end %>
+
+    <% if @light_switch %>
+        The light switch is on
+    <% else %>
+        The light switch is off
+    <% end %>
+
+    <%= form_with url: "/light_switch", local: true, data: {turbo: false} do |f| %>
+        <%= hidden_field_tag 'status', true %>
+        <%= submit_tag "Turn on", disabled: @light_switch, class: "btn btn-font" %>
+    <% end %>
+</div>

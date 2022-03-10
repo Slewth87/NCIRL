@@ -1,0 +1,11 @@
+There were a few things I had in mind which influenced the design of this game.
+First and foremost, the whole point of this lab is to practice nested conditionals. So I tried to take an approach that made ample use of them.
+There are a few other aproaches I could've taken, that are possibly better overall, but dramatically reduce the amount of nesting, so I decided to go this way.
+
+I was also conscious of the intent to use instantiation for these labs. In many ways, this game makes a bit more sense if it was all done in a single file.
+I did figure out a motive for instantiation though. In that I designed it as a game launcher, with a game file.
+The idea being that the instantiated class could be changed up and swapped out with different text, in order to theme the game to something other than the Star Trek setting I've gone with.
+The structure of the game is the main class, and the instantiated class is a particular theme to fit that structure.
+The resulting structure is fairly different to the rather consistent structure we've been writing up to now, but I feel it makes sense for what is to be accomplished here.
+
+Also, I have written in an Easter Egg. If you know Star Trek well, it should be immediately apparent. But if not, I'm happy to point out what kirksExit is.
