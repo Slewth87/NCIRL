@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/static/css/main.2f179a3a.css",
+    "main.js": "/static/js/main.2e6df77d.js",
+    "static/js/377.a18c0d72.chunk.js": "/static/js/377.a18c0d72.chunk.js",
+    "static/media/Anne Bonny.jpeg": "/static/media/Anne Bonny.d185e17d173db27cb582.jpeg",
+    "service-worker.js": "/service-worker.js",
+    "static/media/Dame Jocelyn Bell Burnell.jpeg": "/static/media/Dame Jocelyn Bell Burnell.82762f25ec048c50950b.jpeg",
+    "static/media/Sir Charles Parsons.jpeg": "/static/media/Sir Charles Parsons.450145021fcc028de08d.jpeg",
+    "static/media/Ernest Shackleton.jpeg": "/static/media/Ernest Shackleton.4699574bde07a692de35.jpeg",
+    "index.html": "/index.html",
+    "main.2f179a3a.css.map": "/static/css/main.2f179a3a.css.map",
+    "main.2e6df77d.js.map": "/static/js/main.2e6df77d.js.map",
+    "377.a18c0d72.chunk.js.map": "/static/js/377.a18c0d72.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.2f179a3a.css",
+    "static/js/main.2e6df77d.js"
+  ]
+}

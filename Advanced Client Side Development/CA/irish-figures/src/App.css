@@ -1,0 +1,74 @@
+/* CSS page with some default elements, some overrides, and some new stylings */
+
+/* Default React element, colors adjusted */
+.App {
+  text-align: center;
+  background-color: #282c34;
+  min-height: 100vh;
+  color: white;
+}
+
+/* Element for setting and standardising the height of the Carousel and Header images, to keep this consistent across the site */
+.banner {
+  max-height: 300px;
+  overflow: hidden;
+}
+
+/* Elements designed to position individual images, necessary due to the varying formats and aspect ratios of the images.
+These positions are adapted such that no matter what the screen size, the image will still make sense as presented */
+#bram {
+  margin-top: -35%;
+}
+
+#anne {
+  margin-top: -5%;
+}
+
+#jocelyn {
+  margin-top: -15%;
+}
+
+#ernest {
+  margin-top: -10%;
+}
+
+/* Text overlay for each image, on both individual pages, and the Carousel. Allows for consistent appearance across all pages. */
+.overlay {
+  position: absolute;
+  top: 5em;
+  right: 15%;
+  color: darkred;
+  font-family: serif;
+  font-weight: bold;
+}
+
+/* Custom link styles */
+.linking {
+  font-weight: bold;
+  color: lightblue;
+}
+
+a.book-box {
+  text-decoration: none;
+}
+
+a.book-box:hover {
+  text-decoration: underline;
+}
+
+/* Adjustment to default Carousel style */
+.carousel-indicators {
+  visibility: hidden;
+}
+
+/* Slight adjustment to Carousel appearance to get it to match the Header images on the individual pages. */
+#myCarousel {
+  padding-right: 0;
+  padding-left: 0;
+}
+
+/* Adjustment to the appearance of the Book entries on each individual's pages */
+.row .book-box {
+  margin-left: calc(3 * var(--bs-gutter-x));
+  margin-right: calc(3 * var(--bs-gutter-x));
+}
