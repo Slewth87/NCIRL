@@ -1,0 +1,98 @@
+.App {
+  text-align: center;
+  background-color: #282c34;
+  min-height: 100vh;
+  color: white;
+}
+
+.banner {
+  max-height: 300px;
+  overflow: hidden;
+}
+
+#bram {
+  margin-top: -35%;
+}
+
+#anne {
+  margin-top: -5%;
+}
+
+#jocelyn {
+  margin-top: -15%;
+}
+
+#ernest {
+  margin-top: -10%;
+}
+
+#caption-bram {
+  position: absolute;
+  top: 16em;
+  right: 15%;
+  color: darkred;
+  font-family: serif;
+  font-weight: bold;
+}
+
+#caption-anne {
+  position: absolute;
+  top: 5em;
+  right: 15%;
+  color: darkred;
+  font-family: serif;
+  font-weight: bold;
+}
+
+#caption-charles {
+  position: absolute;
+  top: 3em;
+  right: 15%;
+  color: darkred;
+  font-family: serif;
+  font-weight: bold;
+}
+
+#caption-jocelyn {
+  position: absolute;
+  top: 9em;
+  right: 15%;
+  color: darkred;
+  font-family: serif;
+  font-weight: bold;
+}
+
+#caption-ernest {
+  position: absolute;
+  top: 7em;
+  right: 15%;
+  color: darkred;
+  font-family: serif;
+  font-weight: bold;
+}
+
+.overlay {
+  position: absolute;
+  top: 3em;
+  right: 15%;
+  color: darkred;
+  font-family: serif;
+  font-weight: bold;
+}
+
+.height-limit {
+  height: 10em;
+}
+
+.linking {
+  font-weight: bold;
+}
+
+.linking a {
+  text-decoration: underline;
+  color: lightblue;
+}
+
+a:hover {
+  text-decoration: none;
+}
