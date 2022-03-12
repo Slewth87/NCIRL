@@ -897,3 +897,80 @@ Processing by CalculatorController#sum as HTML
 Completed 200 OK in 4ms (Views: 3.4ms | Allocations: 2825)
 
 
+Started GET "/" for 127.0.0.1 at 2022-03-12 00:38:08 +0000
+  [1m[35m (2.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /usr/local/lib/ruby/gems/3.1.0/gems/railties-7.0.2.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /usr/local/lib/ruby/gems/3.1.0/gems/railties-7.0.2.2/lib/rails/templates/rails/welcome/index.html.erb (Duration: 2.8ms | Allocations: 912)
+Completed 200 OK in 24ms (Views: 9.5ms | ActiveRecord: 0.0ms | Allocations: 7980)
+
+
+Started GET "/math" for 127.0.0.1 at 2022-03-12 00:38:16 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/math"):
+  
+Started GET "/sum" for 127.0.0.1 at 2022-03-12 00:38:59 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/sum"):
+  
+Started GET "/calculate" for 127.0.0.1 at 2022-03-12 00:39:08 +0000
+Processing by CalculatorController#calculate as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering calculator/calculate.html.erb within layouts/application
+  Rendered calculator/calculate.html.erb within layouts/application (Duration: 1.5ms | Allocations: 1088)
+  Rendered layout layouts/application.html.erb (Duration: 322.2ms | Allocations: 89554)
+Completed 200 OK in 325ms (Views: 324.1ms | ActiveRecord: 0.0ms | Allocations: 90876)
+
+
+Started GET "/calculate" for 127.0.0.1 at 2022-03-12 00:39:38 +0000
+  [1m[35m (2.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by CalculatorController#calculate as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering calculator/calculate.html.erb within layouts/application
+  Rendered calculator/calculate.html.erb within layouts/application (Duration: 6.9ms | Allocations: 5458)
+  Rendered layout layouts/application.html.erb (Duration: 255.3ms | Allocations: 95026)
+Completed 200 OK in 276ms (Views: 262.0ms | ActiveRecord: 0.0ms | Allocations: 102245)
+
+
+Started POST "/sum" for 127.0.0.1 at 2022-03-12 00:39:44 +0000
+Processing by CalculatorController#sum as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "number1"=>"5", "number2"=>"3", "commit"=>"+"}
+  Rendering layout layouts/application.html.erb
+  Rendering calculator/sum.html.erb within layouts/application
+  Rendered calculator/sum.html.erb within layouts/application (Duration: 0.7ms | Allocations: 292)
+  Rendered layout layouts/application.html.erb (Duration: 3.9ms | Allocations: 2440)
+Completed 200 OK in 6ms (Views: 4.4ms | ActiveRecord: 0.0ms | Allocations: 3243)
+
+
+Started POST "/sum" for 127.0.0.1 at 2022-03-12 00:39:47 +0000
+Processing by CalculatorController#sum as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "number1"=>"5", "number2"=>"3", "commit"=>"-"}
+  Rendering layout layouts/application.html.erb
+  Rendering calculator/sum.html.erb within layouts/application
+  Rendered calculator/sum.html.erb within layouts/application (Duration: 0.0ms | Allocations: 23)
+  Rendered layout layouts/application.html.erb (Duration: 3.3ms | Allocations: 2054)
+Completed 200 OK in 5ms (Views: 3.7ms | ActiveRecord: 0.0ms | Allocations: 2584)
+
+
+Started POST "/sum" for 127.0.0.1 at 2022-03-12 00:39:50 +0000
+Processing by CalculatorController#sum as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "number1"=>"5", "number2"=>"3", "commit"=>"x"}
+  Rendering layout layouts/application.html.erb
+  Rendering calculator/sum.html.erb within layouts/application
+  Rendered calculator/sum.html.erb within layouts/application (Duration: 0.1ms | Allocations: 23)
+  Rendered layout layouts/application.html.erb (Duration: 3.7ms | Allocations: 2054)
+Completed 200 OK in 5ms (Views: 4.1ms | ActiveRecord: 0.0ms | Allocations: 2576)
+
+
+Started POST "/sum" for 127.0.0.1 at 2022-03-12 00:39:54 +0000
+Processing by CalculatorController#sum as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "number1"=>"5", "number2"=>"3", "commit"=>"/"}
+  Rendering layout layouts/application.html.erb
+  Rendering calculator/sum.html.erb within layouts/application
+  Rendered calculator/sum.html.erb within layouts/application (Duration: 0.1ms | Allocations: 24)
+  Rendered layout layouts/application.html.erb (Duration: 3.0ms | Allocations: 2055)
+Completed 200 OK in 5ms (Views: 3.3ms | ActiveRecord: 0.0ms | Allocations: 2587)
+
+
