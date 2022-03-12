@@ -210,6 +210,7 @@ GEM
     zeitwerk (2.5.4)
 
 PLATFORMS
+  x86_64-darwin-19
   x86_64-darwin-21
 
 DEPENDENCIES
@@ -230,7 +231,7 @@ DEPENDENCIES
   webdrivers
 
 RUBY VERSION
-   ruby 3.0.3p157
+   ruby 3.1.1p18
 
 BUNDLED WITH
    2.2.32
